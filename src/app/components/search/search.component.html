@@ -1,0 +1,28 @@
+<h1>Need Music?</h1>
+<p class='lead'>Use Spotify Searcher to browse new releases and find your next favorite song!</p>
+
+
+<form name="searchForm">
+    <div class='form-group'>
+      <input class='form-control' type="text" placeholder='Search for music...' name="searchStr" [(ngModel)]='searchStr' (keyup)="searchMusic()">
+    </div>
+    <br>
+</form>
+
+<div *ngIf='searchRes'>
+  <div *ngFor='let res of searchRes'>
+    <div class = 'row'>
+      <div class='col-md-12'>
+        <div class='search-res card'>
+          <div class='card-body'>
+            <h4><a [routerLink]="['artist', res.id]">{{res.name}}</a></h4>
+            <div>
+              <strong>Genres: </strong>
+              <span *ngFor='let genre of res.genres'>{{genre}} </span>
+            </div>
+          </div>
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div>

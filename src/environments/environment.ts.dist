@@ -1,0 +1,4 @@
+export const environment = {
+  production: false,
+  SPOTIFY_KEY: your_key_here
+};
