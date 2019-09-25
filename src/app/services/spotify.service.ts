@@ -17,6 +17,8 @@ const httpOptions = {
 
 export class SpotifyService{
     private searchUrl: string;
+    private artistUrl: string;
+    private albumsUrl: string;
 
     constructor(private _http: HttpClient){
     }
@@ -27,5 +29,21 @@ export class SpotifyService{
             .pipe(
                 map(res => res)
             )
+    }
+
+    getArtist(id: string) {
+      this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
+      return this._http.get(this.artistUrl, httpOptions)
+          .pipe(
+              map(res => res)
+          )
+    }
+
+    getAlbums(artistId: string) {
+      this.albumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums';
+      return this._http.get(this.albumsUrl, httpOptions)
+          .pipe(
+              map(res => res)
+          )
     }
 }

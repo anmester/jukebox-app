@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { SearchComponent } from './components/search/search.component';
+import { ArtistComponent } from './components/artist/artist.component';
+// import { AlbumComponent } from './components/album/album.component';
 
 @NgModule({
   imports: [
@@ -18,14 +20,18 @@ import { SearchComponent } from './components/search/search.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: SearchComponent },
-      { path: 'about', component: AboutComponent }
+      { path: 'about', component: AboutComponent },
+      { path: 'artist/:id', component: ArtistComponent}
+      // { path: 'album/:id', component: AlbumComponent}
     ])
   ],
   declarations: [
     AppComponent,
     NavBarComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    ArtistComponent,
+    // AlbumComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
