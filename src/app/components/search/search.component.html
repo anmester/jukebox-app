@@ -3,10 +3,20 @@
 
 
 <form name="searchForm">
-    <!-- (ngSubmit)="onSubmit(searchForm.value)" -->
     <div class='form-group'>
       <input class='form-control' type="text" placeholder='Search for music...' name="searchStr" [(ngModel)]='searchStr' (keyup)="searchMusic()">
     </div>
     <br>
-    <!-- <button class="btn btn-light" type="submit">Search</button> -->
 </form>
+
+<div *ngIf='searchRes'>
+  <div *ngFor='let res of searchRes'>
+    <div class = 'row'>
+      <div class='col-md-12'>
+        <div class='search-res well'>
+          <h4>{{res.name}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
