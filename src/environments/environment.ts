@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  SPOTIFY_KEY: 'BQAGUqPr_eXcH8bjG1k8tlP6NjipOQkGvF0t4eD5lZfS-tvVxIMGwpjyFZ9s8CyRtKRdphFyeF6_8JmKZ1sD-r0-Fz5rQtS8MtF2LN2HeEL7JT6_drrO20s8SBkb33VNkbj_pBQpnv02iONrO3M'
 };
 
 /*
