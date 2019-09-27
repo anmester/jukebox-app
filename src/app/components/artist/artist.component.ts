@@ -36,5 +36,5 @@ export class ArtistComponent implements OnInit {
                     this.albums = albums.items
                 })
         })
-  }
+    }
 }
